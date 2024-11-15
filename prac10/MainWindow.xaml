@@ -1,0 +1,39 @@
+﻿<Window x:Class="prac10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prac10"
+        mc:Ignorable="d"
+        Title="Проверка значений в массиве" Height="450" Width="400" ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen" 
+        Background="#FFF3F4F6" Icon="/free-icon-array-725259.png">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="О программе" Click="btnInfo_Click"/>
+                <Separator/>
+                <MenuItem Header="Выход" Click="btnExit_Click"/>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" 
+                    Opacity="0.9" Margin="0,30,0,0">
+            <TextBlock FontSize="24" FontWeight="Bold" TextAlignment="Center" Margin="0,0,0,20" Foreground="#FF333333">Проверка значений в массиве</TextBlock>
+
+            <Label Content="Введите элементы массива (через запятую):" FontSize="14" Foreground="#FF555555"/>
+            <TextBox x:Name="ArrayInput" Margin="0,5,0,15" FontSize="14" Height="35" Padding="5" 
+                      BorderBrush="#FFBDBDBD" BorderThickness="1"/>
+
+            <Label Content="Введите интервал [a; b] (через запятую):" FontSize="14" Foreground="#FF555555"/>
+            <TextBox x:Name="RangeInput" Margin="0,5,0,15" FontSize="14" Height="35" Padding="5" 
+                      BorderBrush="#FFBDBDBD" BorderThickness="1"/>
+
+            <Button Content="Проверить" Margin="0,10,0,5" FontSize="15" Height="40" Click="btnCheck_Click" 
+                    Background="#FF4CAF50" Foreground="White" BorderThickness="0"/>
+
+            <TextBlock x:Name="ResultText" Margin="0,20,0,0" FontSize="15" TextWrapping="Wrap" 
+                       Foreground="#FF333333" TextAlignment="Center" Height="45"/>
+        </StackPanel>
+    </Grid>
+</Window>
